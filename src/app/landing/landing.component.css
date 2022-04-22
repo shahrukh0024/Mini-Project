@@ -1,0 +1,55 @@
+.img_container
+{
+    background-image: url('../../assets/imgs/work_place.jpg');
+    background-size: cover;
+    height: 600px;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 10cm;
+} 
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+.heading{
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-shadow: 4px 4px 4px #aaa;
+    letter-spacing: 15px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.quote{
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-shadow: 4px 4px 4px #aaa;
+    font-family: cursive;
+}
+
+.more{
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    opacity: 0.6;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    height: 2cm;
+    color: hsl(var(--clr-dark));
+    text-shadow: 4px 4px 4px #aaa;
+    font-size: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+}
+
+.more:hover {background: #aaa;}

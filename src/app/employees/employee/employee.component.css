@@ -1,0 +1,17 @@
+.employee {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.employee_name{
+    font-size:1.3rem;
+    font-weight: 600;
+    text-shadow: 2px 2px 2px #aaa;
+}
+
+.btns{
+    display: flex;
+    flex-direction: column;
+}

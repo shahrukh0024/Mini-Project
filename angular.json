@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "capstone"
+    }
+  },
+  "defaultProject": "capstone",
+  "cli": {
+    "analytics": "023526d6-2c36-45d8-b204-5fd85c4f50d2"
+  }
 }

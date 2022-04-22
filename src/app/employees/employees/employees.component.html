@@ -1,0 +1,14 @@
+<div>
+    <h2 class="title">Employees List</h2>
+    <div class="employees">
+        <app-employee *ngFor="let emp of emps;
+                    index as i; 
+                    count as c;
+                    first as first;
+                    last as last;
+                    odd as odd;
+                    even as even;
+                    " [ngClass]="{even:even,odd:odd,first:first}" [emp]="emp">
+        </app-employee>
+    </div>
+</div>
