@@ -4,6 +4,7 @@ import { LandingComponent } from './landing/landing.component';
 import { EmployeeComponent } from './employees/employee/employee.component';
 import { EmployeesComponent } from './employees/employees/employees.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { AddComponent } from './employees/add/add.component';
 
 const routes: Routes = [
   {
@@ -18,6 +19,10 @@ const routes: Routes = [
   {
     path:'aboutUs',
     component: AboutUsComponent,
+  },
+  {
+    path:'add',
+    component: AddComponent,
   }
 ];
 
