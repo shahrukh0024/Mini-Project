@@ -1012,5 +1012,10 @@ export class EmployeesComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {}
-
+  
+  handleEmpDelete(id : number)
+  {
+    console.log(id);
+    this.emps = this.emps.filter((emp) => emp.id !== id);
+  }
 }
