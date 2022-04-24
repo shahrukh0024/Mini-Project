@@ -7,6 +7,7 @@ import { TEmp } from '../types/types_emp';
   styleUrls: ['./employees.component.css']
 })
 export class EmployeesComponent implements OnInit {
+  show=1;
   emps:TEmp[] = [
         {
           "id": 1,

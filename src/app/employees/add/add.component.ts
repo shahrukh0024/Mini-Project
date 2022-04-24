@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { TEmp } from '../types/types_emp';
 
 @Component({
   selector: 'app-add',
@@ -23,11 +24,13 @@ export class AddComponent implements OnInit {
       }) 
     });
   }
+  
+  @Output() public empForm: EventEmitter <TEmp> = new EventEmitter();
   onSubmit()
   { 
-    event.preventDefault();
     console.log(this.empAddForm);
-    this.empAddForm.reset();
+    alert(this.empAddForm.value.EmpDetails.name)
+    // this.empAddForm.reset();
   }
 
 }

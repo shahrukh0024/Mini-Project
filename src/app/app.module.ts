@@ -10,6 +10,7 @@ import { EmployeeComponent } from './employees/employee/employee.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { AddComponent } from './employees/add/add.component';
 import { EditComponent } from './employees/edit/edit.component';
+import { DetailsComponent } from './employees/details/details.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { EditComponent } from './employees/edit/edit.component';
     AboutUsComponent,
     AddComponent,
     EditComponent,
+    DetailsComponent,
   ],
   imports: [
     BrowserModule,
