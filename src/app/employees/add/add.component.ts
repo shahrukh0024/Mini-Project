@@ -1,5 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { EmployeesService } from '../employees.service';
 import { TEmp } from '../types/types_emp';
 
 @Component({
@@ -9,7 +11,8 @@ import { TEmp } from '../types/types_emp';
 })
 export class AddComponent implements OnInit {
   empAddForm: FormGroup;
-  constructor() { }
+  employeeInfo:TEmp;
+  constructor(private _empService: EmployeesService,private router: Router) { }
 
   ngOnInit(): void {
     this.empAddForm = new FormGroup({
@@ -25,12 +28,12 @@ export class AddComponent implements OnInit {
     });
   }
   
-  @Output() public empForm: EventEmitter <TEmp> = new EventEmitter();
+  @Output() public empForm: EventEmitter <FormGroup> = new EventEmitter();
   onSubmit()
   { 
-    console.log(this.empAddForm);
-    alert(this.empAddForm.value.EmpDetails.name)
-    // this.empAddForm.reset();
+    this._empService.addEmployee(this.empAddForm.value.EmpDetails);
+    this.router.navigate(['employees']);
+    this.empAddForm.reset();
   }
 
 }

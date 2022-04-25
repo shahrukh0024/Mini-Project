@@ -14,3 +14,8 @@
         ></app-employee>
     </div>
 </div>
+<div *ngIf="!display">
+    <app-add 
+        (empForm) ="addEmp($event)"
+    ></app-add>
+</div>

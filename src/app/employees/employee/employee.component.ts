@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Event } from '@angular/router';
+import { Event, Router } from '@angular/router';
 import { TEmp } from '../types/types_emp';
 
 
@@ -10,11 +10,11 @@ import { TEmp } from '../types/types_emp';
   styleUrls: ['./employee.component.css']
 })
 export class EmployeeComponent implements OnInit {
-
+  details:string='details';
   @Input('emp') emp:TEmp;
   @Output() public empDelete: EventEmitter<number> = new EventEmitter();
   @Output() public showDetails: EventEmitter<TEmp> = new EventEmitter();
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {}
   @Input() public isDetailView: boolean;
@@ -25,7 +25,9 @@ export class EmployeeComponent implements OnInit {
 
   fullDetails()
   {
+  
     this.showDetails.emit(this.emp);
+    this.router.navigateByUrl(`/details/${this.emp.id}`,{});
   }
 
 }

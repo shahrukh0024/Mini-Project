@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EmployeesService } from '../employees.service';
 import { TEmp } from '../types/types_emp';
 
 @Component({
@@ -8,7 +9,7 @@ import { TEmp } from '../types/types_emp';
 })
 export class DetailsComponent implements OnInit {
   emp: TEmp;
-  constructor() { }
+  constructor(private _empService: EmployeesService) { }
 
   ngOnInit(): void {}
   onFullDetails(detail: TEmp)

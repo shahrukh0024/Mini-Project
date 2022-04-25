@@ -11,6 +11,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { AddComponent } from './employees/add/add.component';
 import { EditComponent } from './employees/edit/edit.component';
 import { DetailsComponent } from './employees/details/details.component';
+import { EmployeesService } from './employees/employees.service';
+import { DetailsempComponent } from './employees/employee/detailsemp/detailsemp.component';
 
 
 @NgModule({
@@ -23,13 +25,14 @@ import { DetailsComponent } from './employees/details/details.component';
     AddComponent,
     EditComponent,
     DetailsComponent,
+    DetailsempComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [EmployeesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
