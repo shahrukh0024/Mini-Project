@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { EmployeesService } from '../employees.service';
 import { TEmp } from '../types/types_emp';
 
@@ -12,10 +13,17 @@ export class EmployeesComponent implements OnInit {
   
   emps:TEmp[] = [];
  
-  constructor(private _empService : EmployeesService) { }
+  constructor(
+    private _empService : EmployeesService,
+    private activeRoute : ActivatedRoute
+    ) { }
 
   ngOnInit(): void {
     this.emps = this._empService.emps;
+    this.activeRoute.paramMap.subscribe(res=>{
+      console.log(this.activeRoute.paramMap.param.get.id);
+    })
+    this._empService.fetchSingleEmployee(2);
   }
   
   handleEmpDelete(id : number)

@@ -26,8 +26,8 @@ export class EmployeeComponent implements OnInit {
   fullDetails()
   {
   
-    this.showDetails.emit(this.emp);
-    this.router.navigateByUrl(`/details/${this.emp.id}`,{});
+    // this.showDetails.emit(this.emp);
+    // this.router.navigateByUrl(`/details/${this.emp.id}`,{});
   }
 
 }

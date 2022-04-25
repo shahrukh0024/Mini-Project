@@ -1015,4 +1015,9 @@ export class EmployeesService {
     this.emps.unshift(Employee);
   }
 
+  fetchSingleEmployee(id:number)
+  {
+    return;
+  }
+
 }
