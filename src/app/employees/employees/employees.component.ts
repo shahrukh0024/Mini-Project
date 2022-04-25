@@ -20,10 +20,6 @@ export class EmployeesComponent implements OnInit {
 
   ngOnInit(): void {
     this.emps = this._empService.emps;
-    this.activeRoute.paramMap.subscribe(res=>{
-      console.log(this.activeRoute.paramMap.param.get.id);
-    })
-    this._empService.fetchSingleEmployee(2);
   }
   
   handleEmpDelete(id : number)

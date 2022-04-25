@@ -13,7 +13,7 @@ import { EditComponent } from './employees/edit/edit.component';
 import { DetailsComponent } from './employees/details/details.component';
 import { EmployeesService } from './employees/employees.service';
 import { DetailsempComponent } from './employees/employee/detailsemp/detailsemp.component';
-
+import {HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -31,6 +31,7 @@ import { DetailsempComponent } from './employees/employee/detailsemp/detailsemp.
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [EmployeesService],
   bootstrap: [AppComponent]
