@@ -1014,7 +1014,7 @@ export class EmployeesService {
     }
   
   ];
-url = 'https://mocki.io/v1/434208bb-79a0-47bf-a288-43635657572a';  
+url = 'https://mocki.io/v1/434208bb-79a0-47bf-a288-43635657572a'; 
 //  url = 'https://api.onlinewebtutorblog.com/employees';
   addEmployee(Employee:TEmp)
   {
