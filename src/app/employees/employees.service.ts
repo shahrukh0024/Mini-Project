@@ -1,4 +1,5 @@
 import { HttpClient } from '@angular/common/http';
+import { Template } from '@angular/compiler/src/render3/r3_ast';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { TEmp } from './types/types_emp';
@@ -1021,9 +1022,15 @@ url = 'https://mocki.io/v1/434208bb-79a0-47bf-a288-43635657572a';
     this.emps.unshift(Employee);
   }
 
-  public fetchSingleEmployee(id:number):Observable<TEmp>
+  // public fetchSingleEmployee(id:number):Observable<TEmp>
+  // {
+  //   return this.http.get<TEmp>(`${this.url}/details/${id}`);
+  // }
+  
+  public fetchAnEmp(id:number)
   {
-    return this.http.get<TEmp>(`${this.url}/details/${id}`);
+    
+    return this.emps[id]; 
   }
 
 }

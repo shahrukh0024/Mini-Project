@@ -18,12 +18,19 @@ export class DetailsComponent implements OnInit {
   ){}
 
   ngOnInit(): void {
-    this.activeRoute.params.subscribe((params) => {
-      const productId = params.id;
-      this._empService.fetchSingleEmployee(+productId).subscribe((data) => {
-        this.item = data;
-      });
-    });
+    // this.activeRoute.params.subscribe((params) => 
+    //  {
+    //      const productId = params.id;
+    //      this._empService.fetchSingleEmployee(+productId).subscribe((data) => {
+    //      this.item = data;
+    //   });
+    // });
+
+      this.activeRoute.paramMap.subscribe(param=> {
+      this.item = this._empService.fetchAnEmp(+param.get('id')-1);
+
+    })
+
   }
   
 // onFullDetails(detail: TEmp) {
