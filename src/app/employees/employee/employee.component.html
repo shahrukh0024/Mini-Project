@@ -7,10 +7,10 @@
     <p class="employee_designation">{{emp.phone_number}}</p>
     <p class="employee_phone">{{emp.complete_address}}</p>
     <div class="btns" *ngIf="!isDetailView">
-        <button class="btn btn-primary" [routerLink]="['/employees/details',emp.id]">Full Details </button>
+        <button class="btn btn-primary" [routerLink]="['/employees/details',emp.id]"><i class="fa fa-info-circle"></i> </button>
         <!-- <button class="btn btn-primary" routerLink="details">Full Details </button> -->
-        <button class="btn btn-accent" id="ed" >Edit Details </button>
-        <button class="btn btn-danger" (click)="handleDelete()">Remove Employee</button>
+        <!-- <button class="btn btn-accent" id="ed" >Edit Details </button> -->
+        <button class="btn btn-danger" (click)="handleDelete()"><i class="fa fa-close"></i> </button>
     </div>
 </div>
 

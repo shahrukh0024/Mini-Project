@@ -13,7 +13,12 @@
 
 .btns{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.btn{
+    flex-grow: 3;
 }
 
 #ed{

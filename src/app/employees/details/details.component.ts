@@ -12,6 +12,7 @@ import { TEmp } from '../types/types_emp';
 export class DetailsComponent implements OnInit {
   emp: TEmp;
   item:TEmp;
+  editMode:any = true;
   constructor(
     private _empService: EmployeesService,
     private activeRoute: ActivatedRoute
@@ -28,7 +29,9 @@ export class DetailsComponent implements OnInit {
 
       this.activeRoute.paramMap.subscribe(param=> {
       this.item = this._empService.fetchAnEmp(+param.get('id')-1);
-
+    })
+    this.activeRoute.queryParamMap.subscribe(qParam=>{
+      this.editMode=qParam.get('editMode');
     })
 
   }
